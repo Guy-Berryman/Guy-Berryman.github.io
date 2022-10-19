@@ -92,7 +92,7 @@
                                         <div class="font-normal flex-1 mr-5"><span
                                                 class="font-warning">离校请假需要销假，非离校请假无需销假</span><span
                                                 class="font-primary ml-5">查看 &gt;</span></div>
-                                    </div>
+                                    </div></div>
                                     
                                 <span>
 											<div
@@ -114,7 +114,7 @@
 												<div class="flex mb-5 font-12 ai-center">
 													<div class="font-light no-shrink row-label"> 审批流程： </div>
 													<div class="font-normal flex-1 ml-5"> 共2步 <span
-                                                            class="font-primary">查看&gt;</span></div>
+                                                            class="font-primary" onclick="toast1()">查看&gt;</span></div>
 												</div>
 												<div class="flex mb-5 font-12 ai-center">
 													<div class="font-light no-shrink row-label"> 紧急联系人： </div>
@@ -124,7 +124,7 @@
 												<div class="flex mb-5 font-12 ai-start mb-5">
 													<div class="font-light no-shrink row-label"> 请假原因： </div>
 													<div class="font-normal flex-1 ml-5 break-all">
-														外出当家教，给初中生学生补习 </div>
+														出去医院做核酸。。。。。。。 </div>
 												</div>
 												<div class="flex mb-5 font-12 ai-center">
 													<div class="font-light no-shrink row-label"> 发起位置： </div>
@@ -246,7 +246,7 @@
                                 <!---->
                                 <!---->
                             </div>
-                            
+                            </div>
                         </div>
                         <span class="no-shrink">
 									<div class="btn-area flex jc-between no-shrink">
@@ -289,6 +289,7 @@
 								</span>
                     </div>
                 </div>
+
                 <div role="tabpanel" class="van-tab__pane" id="s4" style="display:none;">
                     <div class="flex-col h-screen flex-1 overflow-hidden">
                         <div class="flex-1 ">
@@ -343,7 +344,60 @@
             
         </div>
         
-        
+                <div class="cat-personal-modal flex-center flex-1 h-screen w-screen h-screen absolute pin-l pin-t"
+             id="t1"
+             style="display: none;">
+            <div role="dialog" class="bus-flow-chart-modal van-dialog"
+                 style="z-index: 2048;">
+                <div class="van-dialog__header">
+                    <div>
+                        审批流程
+                    </div>
+                </div>
+                <div class="van-dialog__content">
+                    <div
+                            class="flow-content mx-20 mt-10 overflow-y-auto">
+                        <div
+                                class="flow-row relative"><!---->
+                            <div
+                                    class="content-title flex ai-center"><i
+                                    class="font-primary mr-5 no-shrink bg-white z-index-1 cat-icon iconfont iconround"
+                                    style="font-size: 5.33333vw;"></i><span class="font-14">一级审批人
+                                <!----></span></div>
+                            <div
+                                    class="content-list mx-10 px-15 py-10 font-primary font-14 flex-col"><span
+                                    class="border-primary mb-5 p-5 radius-small flex ai-center"><i
+                                    class="mr-5 no-shrink cat-icon iconfont iconpeople1"
+                                    style="font-size: 5.33333vw;"></i><span
+                                    class="flex-1">[角色]班主任</span></span></div>
+                        </div>
+                        <div
+                                class="flow-row relative"><!---->
+                            <div
+                                    class="content-title flex ai-center"><i
+                                    class="font-primary mr-5 no-shrink bg-white z-index-1 cat-icon iconfont iconround"
+                                    style="font-size: 5.33333vw;"></i><span class="font-14">二级审批人
+                                <!----></span></div>
+                            <div
+                                    class="content-list mx-10 px-15 py-10 font-primary font-14 flex-col"><span
+                                    class="border-primary mb-5 p-5 radius-small flex ai-center"><i
+                                    class="mr-5 no-shrink cat-icon iconfont iconpeople1"
+                                    style="font-size: 5.33333vw;"></i><span
+                                    class="flex-1">[角色]辅导员</span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                        class="van-hairline--top van-dialog__footer">
+                    <button
+                            class="van-button van-button--default van-button--large van-dialog__confirm"
+                            onclick="cancel()">
+                        <div class="van-button__content">
+                            <span class="van-button__text">知道了</span></div>
+                    </button>
+                </div>
+            </div>
+        </div>
         
         <div class="cat-personal-modal flex-center flex-1 h-screen w-screen h-screen absolute pin-l pin-t" id="s2"
              style="display: none;">
@@ -432,6 +486,9 @@
     function open1() {
         document.getElementById('s2').style.display = '';
     }
+    function toast1() {
+        document.getElementById('t1').style.display = '';
+    }
     function click1() {
         console.log("=========")
         let vat1 = document.getElementsByClassName('van-tab')[0];
@@ -456,6 +513,7 @@
     
     function cancel() {
         document.getElementById('s2').style.display = 'none';
+        document.getElementById('t1').style.display = 'none';
     }
     
     
