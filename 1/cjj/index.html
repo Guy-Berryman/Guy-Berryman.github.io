@@ -80,7 +80,7 @@
                                     <div class="flex">
                                         <div class="flex mb-5 flex-1">
                                             <div class="font-light no-shrink row-label"> 请假类型：</div>
-                                            <div class="font-normal flex-1 mr-5"> 病假</div>
+                                            <div class="font-normal flex-1 mr-5"> 事假</div>
                                         </div>
                                         <div class="flex mb-5 flex-1">
                                             <div class="font-light no-shrink row-label"> 需要离校：</div>
@@ -124,7 +124,7 @@
 												<div class="flex mb-5 font-12 ai-start mb-5">
 													<div class="font-light no-shrink row-label"> 请假原因： </div>
 													<div class="font-normal flex-1 ml-5 break-all">
-														肠胃不舒服，，，，，，， </div>
+														家里有事处理，，，，，，， </div>
 												</div>
 												<div class="flex mb-5 font-12 ai-center">
 													<div class="font-light no-shrink row-label"> 发起位置： </div>
@@ -183,7 +183,7 @@
                                                                     style="font-size: 5.33333vw; top: -0.53333vw;"></i><span
                                                                     class="ml-20 mr-5" style="margin-left: 8vw;">一级：唐明 -
 																	审批<span
-                                                                        style="color:#00ca75;">通过</span>(逾期处理)</span>
+                                                                        style="color:#00ca75;">通过</span></span>
 															</div>
 															<div class="font-light ai-center no-shrink"
                                                                  style="margin-top: 0.53333vw;"><span id="time4"></span>
@@ -215,7 +215,7 @@
                                                                     style="font-size: 5.33333vw; top: -0.53333vw;"></i><span
                                                                     class="ml-20 mr-5" style="margin-left: 8vw;">二级：钟雪 -
                                                                     审批<span
-                                                                        style="color:#00ca75;">通过</span>(逾期处理)</span>
+                                                                        style="color:#00ca75;">通过</span></span>
                                                             </div>
                                                             <div class="font-light ai-center no-shrink"
                                                                  style="margin-top: 0.53333vw;"><span id="time5"></span>
@@ -537,14 +537,14 @@ var show1 = function () {
 
 var show2 = function () {
     let date = new Date();
-    date.setDate(date.getDate() + 1);
+    date.setDate(date.getDate() + 0);
     date.setHours(23, 0);
     document.getElementById("time2").innerHTML = formatDate(date);
 }
 
 var show3 = function () {
     let date = new Date();
-    date.setDate(date.getDate() - 2);
+    date.setDate(date.getDate() - 1);
     date.setHours(15, 32);
     document.getElementById("time3").innerHTML = formatDate(date);
 }
