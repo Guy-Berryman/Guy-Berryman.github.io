@@ -124,7 +124,7 @@
 												<div class="flex mb-5 font-12 ai-start mb-5">
 													<div class="font-light no-shrink row-label"> 请假原因： </div>
 													<div class="font-normal flex-1 ml-5 break-all">
-														家里有事处理，，，，，，， </div>
+														家里有事处理，需回家一趟。 </div>
 												</div>
 												<div class="flex mb-5 font-12 ai-center">
 													<div class="font-light no-shrink row-label"> 发起位置： </div>
@@ -143,7 +143,7 @@
 													<div class="font-light no-shrink row-label" style="width: 16vw;">
 														目的地： </div>
 													<div class="font-normal flex-1 ml-5 break-all">
-														广东省/佛山市/南海区/狮山镇 </div>
+														广东省/惠州市/惠城区/惠州大道 </div>
 												</div>
 												<div class="flex mb-5 font-12 ai-start">
 													<div class="font-light no-shrink row-label"> 宿舍信息： </div>
@@ -227,7 +227,7 @@
                                                                 <div data-v-7622a762=""
                                                                      class="cat-approve-opinion font-light font-12 relative close"
                                                                      style="-webkit-box-orient: vertical;">
-                                                                    审批意见：做好个人防护
+                                                                    审批意见：无
                                                                     <!---->
                                                                     <!---->
                                                                     <!---->
@@ -531,13 +531,13 @@ function formatDate(date) {
 
 var show1 = function () {
     let date = new Date();
-    date.setHours(8, 0);
+    date.setHours(6, 0);
     document.getElementById("time1").innerHTML = formatDate(date);
 }
 
 var show2 = function () {
     let date = new Date();
-    date.setDate(date.getDate() + 0);
+    date.setDate(date.getDate() + 1);
     date.setHours(23, 0);
     document.getElementById("time2").innerHTML = formatDate(date);
 }
@@ -551,13 +551,15 @@ var show3 = function () {
 
 var show4 = function () {
     let date = new Date();
-    date.setHours(16, 14);
+    date.setDate(date.getDate() - 1);
+    date.setHours(16, 26);
     document.getElementById("time4").innerHTML = formatDate(date);
 }
 
 var show5 = function () {
     let date = new Date();
-    date.setHours(16, 37);
+    date.setDate(date.getDate() - 1);
+    date.setHours(16, 45);
     document.getElementById("time5").innerHTML = formatDate(date);
 }
 
